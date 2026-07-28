@@ -1,29 +1,42 @@
 # Vela Science
 
-Vela Science builds public infrastructure for bounded, reproducible scientific work with research agents. Agents may produce evidence. Verifiers may check it. Humans retain authority over scientific acceptance.
+Vela is an open scientific-state substrate: version control for what is
+claimed, submitted, verified, decided, corrected, and ready to do next.
 
-## Three layers
+The core loop is deliberately small:
 
-1. **[Vela](https://github.com/vela-science/vela)** is the protocol and reference implementation for version-controlled scientific state: event logs, artifacts, Receipts, policy routing, deterministic replay, and protected human decisions.
-2. **[Canopus](https://github.com/vela-science/vela-research-harness)** is the replaceable producer and runtime. It gives Codex a preregistered mission, bounds worker activity, invokes independent verifiers, and lands evidence through released Vela interfaces.
-3. **Standalone frontiers** are the Git custody sources for each scientific state machine. They remain separate repositories so every frontier has an independently clonable log, policy, replay surface, and history.
+```text
+inspect → attempt → submit → verify → decide → continue
+```
 
-**Vela Observatory** at [app.vela.space](https://app.vela.space) is an anonymous, read-only projection of those public frontiers. It can display evidence and pending review, but it cannot approve or mutate scientific state.
+Producers produce. Verifiers report. Authorized reviewers decide. Events
+record. Replay derives standing. Readers explain.
 
-## OpenAI Build Week
+## Product
 
-**Canopus: Bounded Research for Codex**  
-Give Codex a mission. Verify the work. Keep humans in authority.
+- **[vela](https://github.com/vela-science/vela)** — the public product
+  monorepo: Rust CLI and protocol implementation, TypeScript protocol SDK,
+  Canopus bounded producer, schemas, conformance fixtures, and release
+  automation.
+- **[Vela Observatory](https://app.vela.space)** — a read-only projection of
+  exact public Frontier state. It cannot sign, approve, or mutate scientific
+  records.
+- **[vela.space](https://www.vela.space)** — the product thesis and public
+  editorial surface.
 
-- [Build Week evidence](https://github.com/vela-science/vela-research-harness/blob/main/BUILD_WEEK.md)
-- [Public source and judge quickstart](https://github.com/vela-science/vela-research-harness)
-- [Live evidence surface](https://app.vela.space/build-week)
+Canopus is optional and removable. It can run bounded agent work and submit
+evidence through released Vela interfaces, but it is never a scientific
+authority.
 
-## Public frontiers
+## Public Frontiers
 
-- [Formal Conjectures](https://github.com/vela-science/formal-conjectures-frontier)
+Each Frontier is a standalone Git custody source with its own clonable history,
+exact replay surface, and authorized Decision boundary.
+
 - [Erdős Problems](https://github.com/vela-science/erdos-frontier)
+- [Formal Conjectures](https://github.com/vela-science/formal-conjectures-frontier)
 - [Quantum Codes](https://github.com/vela-science/quantum-codes-frontier)
 - [Sidon Sets](https://github.com/vela-science/sidon-frontier)
 
-Verifier success is evidence, not acceptance. No model belongs in the protected decision path.
+Verifier success is evidence, not acceptance. No model belongs in the
+repository-authority or human Decision path.
