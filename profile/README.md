@@ -22,14 +22,14 @@ Decision changes Standing, and strict replay derives the current state.
 - **[Problems](https://github.com/vela-science/problems)** owns the public
   discovery and hosted-work product at [problems.science](https://problems.science).
   Its read projection and WebMCP tools cannot change scientific Standing.
-- **[Workbench](https://github.com/vela-science/vela-workbench)** owns local
+- **[Workbench](https://github.com/vela-science/workbench)** owns local
   activity, native runs, evidence preparation, and explicit handoff to Vela's
   Submission boundary. It holds no Repository authority.
 - **[Math](https://github.com/vela-science/math)** is the reference mathematics
   authority Repository: exact Sources, Claims, Verifications, Decisions, and
   replay state under one local trust root.
 
-[vela.space](https://vela.space) is the public editorial surface. Problems,
+[vela.space](https://vela.space) is the tiny public front door. Problems,
 Workbench, Math, and Core remain separate because discovery, activity,
 scientific authority, and protocol execution have different owners.
 
@@ -60,15 +60,9 @@ Verifier success, a model output, a Git commit, and a Web badge are evidence or
 publication facts, not acceptance. No model belongs in the human Decision or
 repository-authority path.
 
-## Current limits
+## Current limit
 
-- Problems source and production remain frozen at
-  `532241ba5db565e9ee35e13cbd7eff76393f6475` through the WebMCP challenge
-  submission and its subsequent 24-hour exact-SHA stability window.
-- The public projection still binds Vela `0.977.3` and a private authenticated
-  source-adapter asset. Public reconstruction and the related rights ledger
-  remain deferred until the challenge freeze passes.
-- The current `vela.space` deployment still comes from private transitional
-  `vela-web` source and links Vela `0.977.2`. A rights-safe tiny www extraction,
-  deployment parity, licensing closure, and approved legacy cleanup remain
-  deferred work.
+Workbench source and unsigned macOS builds are qualified, but public signed
+distribution remains blocked on a Developer ID identity and notarization
+credentials. The unsigned artifact is qualification evidence, not an
+installable release substitute.
